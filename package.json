@@ -1,0 +1,61 @@
+{
+  "name": "custom-icons",
+  "version": "0.0.1",
+  "description": "React component to build custom icon sets from a collection of svgs",
+  "author": "Greg Thompson",
+  "license": "MIT",
+  "scripts": {
+    "jsx": "jsx -x jsx src dist",
+    "watch:jsx": "jsx -x jsx -w src dist",
+    "webpack": "webpack-dev-server --config example/webpack.config.js --progress --colors",
+    "example": "browserify example/entry.js -o example/bundle.js",
+    "watch:example": "watch 'npm run example -s' ./src",
+    "example:data": "node example/data",
+    "serve": "http-server -p 8000",
+    "start": "npm run watch:jsx & npm run watch:example & npm run serve"
+  },
+  "dependencies": {
+    "classnames": "^1.2.0",
+    "geomicons-open": "^2.0.0",
+    "grunticon-lib": "^1.0.2",
+    "handlebars": "^3.0.3",
+    "humanize-plus": "^1.5.0",
+    "jszip": "^2.5.0",
+    "jszip-utils": "0.0.2",
+    "lodash": "^3.5.0",
+    "react": "^0.13.1",
+    "react-tools": "^0.13.1",
+    "reactify": "^1.1.0",
+    "uglify-js": "^2.4.23",
+    "webpack": "^1.7.3"
+  },
+  "devDependencies": {
+    "brfs": "^1.2.0",
+    "browserify": "^9.0.3",
+    "glob": "^4.3.1",
+    "http-server": "^0.8.0",
+    "json-loader": "^0.5.1",
+    "jsx-loader": "^0.12.2",
+    "watch": "^0.14.0",
+    "webpack-dev-server": "^1.7.0"
+  },
+  "main": "dist/index.js",
+  "keywords": [
+    "SVG",
+    "React",
+    "Grunticon"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thompsongl/custom-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thompsongl/custom-icons/issues"
+  },
+  "homepage": "https://github.com/thompsongl/custom-icons",
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
+}
