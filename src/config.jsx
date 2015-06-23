@@ -38,7 +38,7 @@ var Config = React.createClass({
     var keys = Object.keys(defaults);
     return (
       <div className={this.props.className + ' overflow-hidden'}>
-        <h3 className="">Custom Properties</h3>
+        <h3 className="">Grunticon Config</h3>
         <ul className="list-reset sm-flex flex-wrap mxn2">
           {keys.map(this.renderConfig)}
         </ul>
