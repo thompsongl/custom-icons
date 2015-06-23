@@ -211,7 +211,7 @@ var Css = React.createClass({displayName: "Css",
     return (
       React.createElement("div", {className: "overflow-hidden"}, 
         React.createElement("div", {className: "flex flex-center flex-wrap mb2 mxn1"}, 
-          React.createElement("h3", {className: "m0 px1 flex-auto"}, "Compiled CSS"), 
+          React.createElement("h3", {className: "m0 px1 flex-auto"}, "Icon Set"), 
           React.createElement("div", {className: "h5 bold px1"}, fileSize), 
           React.createElement("a", {href: download, 
             className: "button ml1 mr1", 
@@ -259,12 +259,13 @@ var IconsList = React.createClass({displayName: "IconsList",
     };
     return (
       React.createElement("li", {key: 'module-'+m.name}, 
-        React.createElement("label", {className: classnames('block', 'flex', 'flex-center', 'flex-wrap', 'border-bottom', { 'bg-aqua': active })}, 
-          React.createElement("div", {className: "flex flex-center"}, 
+        React.createElement("label", {className: classnames('inline-block p2', { 'bg-aqua': active })}, 
+          React.createElement("div", {className: ""}, 
             React.createElement("input", {type: "checkbox", 
               checked: active, 
               onChange: handleChange, 
-              className: "m1"}), 
+              className: "m1", 
+              style: {position:'absolute',opacity:0}}), 
             React.createElement("div", {dangerouslySetInnerHTML: svg})
           )
         )
@@ -290,7 +291,7 @@ var IconsList = React.createClass({displayName: "IconsList",
             )
           )
         ), 
-        React.createElement("ul", {className: "list-reset border-top"}, 
+        React.createElement("ul", {className: "flex flex-wrap list-reset border-top"}, 
           this.props.icons.map(this.renderIcon)
         )
       )

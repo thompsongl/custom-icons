@@ -156,7 +156,7 @@ var Css = React.createClass({
     return (
       <div className="overflow-hidden">
         <div className="flex flex-center flex-wrap mb2 mxn1">
-          <h3 className="m0 px1 flex-auto">Compiled CSS</h3>
+          <h3 className="m0 px1 flex-auto">Icon Set</h3>
           <div className="h5 bold px1">{fileSize}</div>
           <a href={download}
             className="button ml1 mr1"

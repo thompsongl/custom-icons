@@ -22,12 +22,13 @@ var IconsList = React.createClass({
     };
     return (
       <li key={'module-'+m.name}>
-        <label className={classnames('block', 'flex', 'flex-center', 'flex-wrap', 'border-bottom', { 'bg-aqua': active })}>
-          <div className="flex flex-center">
+        <label className={classnames('inline-block p2', { 'bg-aqua': active })}>
+          <div className="">
             <input type="checkbox"
               checked={active}
               onChange={handleChange}
-              className="m1" />
+              className="m1"
+              style={{position:'absolute',opacity:0}} />
             <div dangerouslySetInnerHTML={svg}></div>
           </div>
         </label>
@@ -53,7 +54,7 @@ var IconsList = React.createClass({
             </button>
           </div>
         </div>
-        <ul className="list-reset border-top">
+        <ul className="flex flex-wrap list-reset border-top">
           {this.props.icons.map(this.renderIcon)}
         </ul>
       </div>
